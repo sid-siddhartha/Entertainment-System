@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} Register{% endblock %}
+{% block body %}
+<div class="container-md">
+    <h1> Registration </h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <table>
+    <form action="" method="post">
+    <p >
+        {{ form.username.label }}
+        {{ form.username(size=32) }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password(size=32) }}
+    </p>
+        <p>
+        {{ form.retype.label }}
+        {{ form.retype(size=32) }}
+    </p>
+
+        <p>
+        {{ form.gender.label }}
+        {{ form.gender }}
+    </p>
+        <p>
+        {{ form.email.label }}
+        {{ form.email }}
+    </p>
+        <p>
+        {{ form.phoneno.label }}
+        {{ form.phoneno }}
+    </p>
+        <p>
+        {{ form.address.label }}
+        {{ form.address }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+    </table>
+    <body>
+        <h2 align="center">Subscribe to receive updates!</h2>
+    </body>
+</div>
+{% endblock %}

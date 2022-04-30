@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %} ContactUs {% endblock%}
+{% block body %}
+
+<div class="container-md">
+
+    <center>
+        <body>
+        <center>
+            <p style="font-size:15px" class="card-text mt-4">
+                            <div class="avatar mx-auto white">
+
+        <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p></div>
+<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" class="rounded-circle"/></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+            </center>
+        </body>
+</div>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <div class="container">
+<form role="form">
+    <div class="row setup-content" id="ProfileSetup-step">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                 <br/>
+                <div class="form-horizontal">
+                    <form  role="form">
+                        <fieldset>
+
+                          <legend>Enter Your Profile Information</legend>
+                          <br/>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" for="card-holder-name">Your Email</label>
+                            <div class="col-sm-9">
+                              <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Email"  />
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" for="card-number">Name</label>
+                            <div class="col-sm-9">
+                             <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Name" />
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" for="card-number"> Phone Number</label>
+                            <div class="col-sm-9">
+                             <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter  Phone Number" />
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" for="card-number">Address</label>
+                            <div class="col-sm-9">
+                             <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Address" />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                               <div class="form-group">
+                                    <label class="col-sm-6 control-label" for="card-number">City</label>
+                                    <div class="col-sm-6" style="padding-left:8px">
+                                     <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter City" />
+                                    </div>
+                                  </div>
+                          </div>
+                           <div class="col-lg-6">
+                               <div class="form-group">
+                                    <label class="col-sm-6 control-label" for="card-number">State/Province</label>
+                                    <div class="col-sm-6" style="padding:0px">
+                                     <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter State/Province" />
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label" for="card-number">Country</label>
+                            <div class="col-sm-9">
+                             <select required="required" class="form-control" >
+                                  <option value="0">Select Country</option>
+                                 <option value="pakistan">India</option>
+                                 <option value="usa">USA</option>
+                                 <option value="uk">UK</option>
+                                 <option value="australia">Austrlia</option>
+                             </select>
+                            </div>
+                          </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div></footer>
+{% endblock %}

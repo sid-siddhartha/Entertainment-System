@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block body %}
+<div class="container-md">
+    <h1> Login </h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form action="" method="post">
+    <p >
+        {{ form.username.label }}
+        {{ form.username(size=32) }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password(size=32) }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+    <body>
+    If the account is exist Login into your account otherwise signin
+    </body>
+</div>
+{% endblock %}
